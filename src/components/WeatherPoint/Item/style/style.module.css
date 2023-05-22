@@ -1,0 +1,9 @@
+.item {
+    font-size: 17px;
+    width: 100%;
+    position: relative;
+    display: inline-grid;
+    grid-template-columns: minmax(auto,178px) auto;
+    letter-spacing: .5px;
+    white-space: nowrap;
+}

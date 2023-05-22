@@ -1,0 +1,22 @@
+.main {}
+
+.list {    
+    width: 340px;
+    height: 226px;
+    overflow: hidden;
+    position: relative;
+    display: block;
+    outline: currentColor solid 1px;
+    list-style-type: none;
+    padding: 21px 17px 21px 17px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-size: 17px;
+    /* background-image: url("./Weather page.png"); */
+    /* background-position: -50px -96px; */
+ 
+}
+
+.list li {
+    margin-bottom: 11px;
+}
