@@ -23,7 +23,7 @@ const About = (props: Props) => {
                         {!process.env.STORYBOOK_DEV ? <Link to={'/images'}>View Images By Date</Link> : 'View Images By Date'}
                     </Button>
                     <Button>
-                        {!process.env.STORYBOOK_DEV ? <Link to={'/images'}>View Weather</Link> : 'View Weather'}
+                        {!process.env.STORYBOOK_DEV ? <Link to={'/weather-points'}>View Weather</Link> : 'View Weather'}
                     </Button>
                 </div>
             </div>

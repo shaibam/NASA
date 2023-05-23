@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { PhotoType } from '../../Types/PhotoType'
+import imagesMock from '../../mocks/mockPhotos.json'
 import _ from 'lodash'
 
 const remapPhotos = (photos: any): PhotoType[] => {
@@ -15,13 +16,17 @@ const remapPhotos = (photos: any): PhotoType[] => {
 
 export const useImages = (date: string) => {
     const [images, setImages] = useState<PhotoType[]>([])
-    
-    useEffect(() => {        
+
+    useEffect(() => {
         fetch(`https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?earth_date=${date}&api_key=DEMO_KEY&page=1`)
             .then(r => r.json())
             .then(j => {
+                let remappedPhotos
                 if (j?.photos?.length) {
-                    const remappedPhotos = remapPhotos(j.photos);
+                    remappedPhotos = remapPhotos(j.photos);
+                    setImages(remappedPhotos)
+                } else { // just for development as fallback when data does not arrive
+                    remappedPhotos = remapPhotos(imagesMock.photos);
                     setImages(remappedPhotos)
                 }
             })

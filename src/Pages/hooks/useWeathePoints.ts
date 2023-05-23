@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { WeatherPointType } from '../../Types/WeatherPointType'
 import _ from 'lodash'
+import { generateMockWeatherPoints } from '../../mocks/generateMockWeatherPoints'
 
 export const URL = `https://api.nasa.gov/insight_weather/?api_key=DEMO_KEY&feedtype=json&ver=1.0`
 
@@ -25,7 +26,12 @@ export const useWeather = () => {
         fetch(URL)
             .then(r => r.json())
             .then(j => {
-                setWeatherPointList(remapWeather(j))
+                if (j.error) {
+                    const points: any = remapWeather(generateMockWeatherPoints());                    
+                    setWeatherPointList(points);
+                } else {
+                    setWeatherPointList(remapWeather(j))
+                }
             })
     }, [])
 
