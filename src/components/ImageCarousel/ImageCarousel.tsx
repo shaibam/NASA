@@ -1,23 +1,9 @@
+import clsx from 'clsx'
 import _ from 'lodash'
 import React, { useEffect, useRef, useState } from 'react'
 import Image from '../Image/Image'
+import ItemContainer from './ItemContainer/ItemContainer'
 import style from './style/style.module.css'
-
-type ItemProps = {
-    scrollIntoView: boolean,
-    src?: string,
-}
-
-const Item = ({ scrollIntoView, src }: ItemProps) => {
-    const itemRef = useRef<HTMLLIElement>(null);
-    useEffect(() => {
-        if (!itemRef.current || !scrollIntoView) return;
-        console.log('go', itemRef.current)
-        itemRef.current.scrollIntoView({ behavior: "smooth" })
-    }, [scrollIntoView])
-
-    return (<li className={style.item} ref={itemRef}><Image src={src} /></li>)
-}
 
 type Props = {
     images?: Array<{
@@ -29,34 +15,52 @@ type Props = {
 }
 
 const ImageCarousel = ({ images }: Props) => {
-    const [startIndex, setStartIndex] = useState(4)
-    const listRef = useRef<any>()
-
-    useEffect(() => {
-        if (listRef?.current) {
-
-        }
-    }, [startIndex])
+    const IMAGES_IN_VIEW = 4
+    const [inView, setInView] = useState({
+        start: 0,
+        end: IMAGES_IN_VIEW - 1,
+        direction: 1
+    })
 
     if (!images?.length) return null;
 
     const handleNext = () => {
-        setStartIndex(current => current + 1)
+        setInView(({ start, end }) => (
+            {
+                start: start + 1,
+                end: Math.min(end + 1, images.length),
+                direction: 1
+            }
+        ))
     }
 
+    const handleBack = () => {
+        setInView(({ start, end }) => (
+            {
+                start: Math.max(start - 1, 0),
+                end: end - 1,
+                direction: -1
+            }
+        ))
+    }
     return (
         <div className={style.main}>
-            <ul className={style.list} ref={listRef}>
-                {_.map(images, ({ id, src, cameraName, date }, index) => {                    
+            <div className={style.arrowContainer}>
+                <button className={clsx(style.arrow, style.left)} onClick={handleBack}></button>
+            </div>
+            <ul className={style.list}>
+                {_.map(images, ({ id, src, cameraName, date }, index) => {
                     if (!src) return null;
-                    return <Item
+                    return <ItemContainer
                         key={id}
                         src={src}
-                        scrollIntoView={index === startIndex}
+                        scrollIntoView={index === (inView.direction === 1 ? inView.end : inView.start)}
                     />
                 })}
             </ul>
-            <button onClick={handleNext}>Next</button>
+            <div className={style.arrowContainer}>
+                <button className={clsx(style.arrow, style.right)} onClick={handleNext}></button>
+            </div>
         </div >
     )
 }

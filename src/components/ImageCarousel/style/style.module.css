@@ -1,17 +1,45 @@
-.main {}
+.main {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
 
-.list {    
+.list {
     margin: 0;
     padding: 0;
-    width: 1145px;
-    list-style-type: none;    
-    white-space: nowrap;    
+    width: 921px;
+    list-style-type: none;
+    white-space: nowrap;
     overflow-x: hidden;
     overflow-y: hidden;
 }
 
-.item {
-    /* float: left; */
-    display: inline-block;
-    margin-right: 20px;
+.arrowContainer {
+    transform: translateY(-6px);
+    width: fit-content;
+    height: fit-content;    
+}
+
+.arrow {
+    all: unset;
+    cursor: pointer;
+    border: solid #ded6c9;
+    border-width: 0 4px 4px 0;    
+    padding: 3px;
+    height: 38px;
+    width: 38px;        
+    transform-origin: center;
+}
+
+.arrowContainer:hover .arrow {
+    border: solid #b48334;
+    border-width: 0 4px 4px 0;
+}
+
+.right {
+    transform: rotate(-45deg);    
+}
+
+.left {
+    transform: rotate(135deg);    
 }
