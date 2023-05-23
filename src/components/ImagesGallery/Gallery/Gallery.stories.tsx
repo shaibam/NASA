@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import IMAGES from './mock/mockPhotos.json';
+import IMAGES from '../../../mocks/mockPhotos.json';
 import Gallery from './Gallery';
 import _ from 'lodash';
 

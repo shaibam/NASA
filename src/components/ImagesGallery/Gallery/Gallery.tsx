@@ -2,7 +2,6 @@ import React from 'react'
 import _ from 'lodash'
 import style from './style/style.module.css'
 import Image from '../../Image/Image'
-// import Image from '../../Image/Image'
 
 type Props = {
   images?: Array<{
