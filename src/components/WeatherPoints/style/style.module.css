@@ -1,0 +1,12 @@
+.points {
+    width: 1150px;
+    max-height: 750px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+    margin-bottom: 20px;
+}
+
+.pageNav {
+    float: right
+}

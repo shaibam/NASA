@@ -14,7 +14,6 @@ type Props = {
 }
 
 const Gallery = ({ images }: Props) => {
-
   return (
     <>
       <div className={style.images}>
@@ -26,7 +25,7 @@ const Gallery = ({ images }: Props) => {
           />
         })}
       </div>
-    
+
     </>
   )
 }
