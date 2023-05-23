@@ -1,11 +1,11 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import imagesMock from '../../mocks/mockPhotos.json'
 
-import About from './About';
+import Images from './Images';
 
-const meta: Meta<typeof About> = {
-    title: 'Pages/About',
-    component: About,
+const meta: Meta<typeof Images> = {
+    title: 'Pages/Images',
+    component: Images,
     parameters: {
         mockData: [
             {
@@ -20,8 +20,8 @@ const meta: Meta<typeof About> = {
 
 export default meta;
 
-type Story = StoryObj<typeof About>;
+type Story = StoryObj<typeof Images>;
 
 export const Default: Story = {
-    render: () => <About />,
+    render: () => <Images />,
 };

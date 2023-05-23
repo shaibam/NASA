@@ -1,4 +1,9 @@
 .gallery {
     width: 1150px;
-    height: 750px;    
+    height: 750px;
+    margin-bottom: 20px;
+}
+
+.pageNav {
+    float: right
 }

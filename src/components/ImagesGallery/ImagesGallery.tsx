@@ -36,7 +36,9 @@ const ImagesGallery = ({ images }: Props) => {
             <div className={style.gallery}>
                 <Gallery images={imagesMemo} />
             </div>
-            <PageNav pages={pages} index={pageIndex} onSetPage={setPageIndex} />
+            <div className={style.pageNav}>
+                <PageNav pages={pages} index={pageIndex} onSetPage={setPageIndex} />
+            </div>
         </>
     )
 }

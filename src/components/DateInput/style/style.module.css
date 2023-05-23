@@ -1,0 +1,44 @@
+.date {    
+}
+
+.form {
+    display: flex;    
+    align-items: center;
+    gap: 5px
+}
+
+.form label {    
+    font-size: 17px;
+}
+
+.inputAndSearch {
+    border-radius: 10px;
+    border: 1px solid lightgray;
+    height: 30px;
+    position: relative;
+    display: flex;
+    overflow: hidden;
+}
+
+.input,
+.input:focus {
+    appearance: none;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    width: 162px;
+    text-indent: 10px;
+    
+}
+
+.search {
+    all: unset;
+    cursor: pointer;
+    background-color: #ded6c9;
+    height: 100%;
+    padding-inline: 22px;
+}
+
+.search:hover {
+    background-color: #b48334;
+}
