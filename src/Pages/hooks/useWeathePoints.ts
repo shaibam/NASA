@@ -5,7 +5,7 @@ import _ from 'lodash'
 export const URL = `https://api.nasa.gov/insight_weather/?api_key=DEMO_KEY&feedtype=json&ver=1.0`
 
 export const remapWeather = (points: any) => {
-    const data = _.omit(points, 'sol_keys');
+    const data = _.omit(points, ['sol_keys', 'validity_checks']);
     return _.map(data, ({ AT, HWS, PRE, First_UTC, Last_UTC }, key) => {
         return {
             dataPoint: key,

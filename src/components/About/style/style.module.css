@@ -7,19 +7,19 @@
     height: 350px;
 }
 
-.imageWrapper {    
+.imageWrapper {
     flex-basis: 530px;
-	flex-grow: 0;
-	flex-shrink: 0;
+    flex-grow: 0;
+    flex-shrink: 0;
     overflow: hidden;
 }
 
-.image {    
+.image {
     height: 350px;
     margin-bottom: 15px;
 }
 
-.imageDescription {    
+.imageDescription {
     display: block;
     width: 100%;
     text-align: center;
@@ -39,4 +39,8 @@
 .buttons {
     display: flex;
     gap: 20px
+}
+
+.buttons a {
+    all: unset;
 }

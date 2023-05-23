@@ -1,14 +1,12 @@
-import _ from 'lodash'
 import React from 'react'
 import Button from './Button/Button'
 import style from './style/style.module.css'
+import { Link } from "react-router-dom";
 
 type Props = {
-    onViewByDate?: () => any,
-    onViewWeather?: () => any,
 }
 
-const About = ({ onViewByDate = () => { }, onViewWeather = () => { } }: Props) => {
+const About = (props: Props) => {    
     return (
         <div className={style.main}>
             <div className={style.imageWrapper}>
@@ -21,8 +19,12 @@ const About = ({ onViewByDate = () => { }, onViewWeather = () => { } }: Props) =
                     Curiosity set out to answer the question: Did Mars ever have the right environmental conditions to support small life forms called microbes? Early in its mission, Curiosity's scientific tools found chemical and mineral evidence of past habitable environments on Mars. It continues to explore the rock record from a time when Mars could have been home to microbial life.
                 </p>
                 <div className={style.buttons}>
-                    <Button onClick={onViewByDate}>View Images By Date</Button>
-                    <Button onClick={onViewByDate}>View Weather</Button>
+                    <Button>
+                        {!process.env.STORYBOOK_DEV ? <Link to={'/images'}>View Images By Date</Link> : 'View Images By Date'}
+                    </Button>
+                    <Button>
+                        {!process.env.STORYBOOK_DEV ? <Link to={'/images'}>View Weather</Link> : 'View Weather'}
+                    </Button>
                 </div>
             </div>
         </div>

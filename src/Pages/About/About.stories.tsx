@@ -14,7 +14,10 @@ const meta: Meta<typeof About> = {
                 status: 200,
                 response: imagesMock,
             }
-        ]
+        ],
+        reactRouter: {
+            routePath: '/',            
+        }
     }
 };
 
