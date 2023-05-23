@@ -11,11 +11,6 @@ const meta: Meta<typeof ImageCarousel> = {
 export default meta;
 type Story = StoryObj<typeof ImageCarousel>;
 
-
-export const Default: Story = {
-    render: () => <ImageCarousel />,
-};
-
 const filterPhotos = (photos: any) => {
     return _.map(photos, ({ id, img_src, camera, earth_date }) => {
         return {
@@ -31,3 +26,8 @@ export const WithProps: Story = {
     render: () => <ImageCarousel
         images={filterPhotos(IMAGES.photos)} />,
 };
+
+export const Default: Story = {
+    render: () => <ImageCarousel />,
+};
+

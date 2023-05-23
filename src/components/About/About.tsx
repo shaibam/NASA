@@ -15,8 +15,8 @@ const About = ({ text, image, onViewByDate, onViewWeather }: Props) => {
     return (
         <div className={style.main}>
             <div className={style.imageWrapper}>
-                <img className={style.image} src='https://mars.nasa.gov/internal_resources/586/' />
-                <span>Curiosity rover image</span>
+                <img className={style.image} src='https://mars.nasa.gov/internal_resources/586/' alt='cover'/>
+                <span className={style.imageDescription} >Curiosity rover image</span>
             </div>
             <div className={style.right}>
                 <p className={style.details}>

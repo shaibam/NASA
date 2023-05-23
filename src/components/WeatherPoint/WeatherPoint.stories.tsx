@@ -10,12 +10,6 @@ const meta: Meta<typeof WeatherPoint> = {
 export default meta;
 type Story = StoryObj<typeof WeatherPoint>;
 
-
-export const Default: Story = {
-  render: () => <WeatherPoint />,
-};
-
-
 export const WithProps: Story = {
   render: () => <WeatherPoint
     dataPoint="689"
@@ -26,3 +20,8 @@ export const WithProps: Story = {
     lastUTC="2023-05-22T17:57:07.40Z"
   />,
 };
+
+export const Default: Story = {
+  render: () => <WeatherPoint />,
+};
+

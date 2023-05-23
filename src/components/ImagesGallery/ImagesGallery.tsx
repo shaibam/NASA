@@ -2,6 +2,7 @@ import React, { useMemo, useState } from 'react'
 import Gallery from './Gallery/Gallery'
 import PageNav from './PageNav/PageNav'
 import _ from 'lodash'
+import style from './style/style.module.css';
 
 type Props = {
     images?: Array<{
@@ -27,13 +28,15 @@ const ImagesGallery = ({ images }: Props) => {
 
     const imagesMemo = useMemo(() => {
         return images?.slice(startImageIndex, startImageIndex + IMAGES_IN_VIEW);
-    }, [pages])
-    
-    console.log({pages,pageIndex})
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [pageIndex, pages])
+
     return (
         <>
-            <Gallery images={imagesMemo} />
-            <PageNav pages={pages} index={pageIndex} onSetPage={setPageIndex}/>
+            <div className={style.gallery}>
+                <Gallery images={imagesMemo} />
+            </div>
+            <PageNav pages={pages} index={pageIndex} onSetPage={setPageIndex} />
         </>
     )
 }

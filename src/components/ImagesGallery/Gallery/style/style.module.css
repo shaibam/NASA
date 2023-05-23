@@ -1,9 +1,7 @@
 .images {
     width: 1150px;
-    height: 750px;
+    max-height: 750px;
     display: flex;
     flex-wrap: wrap;
     gap: 18px;
 }
-
-.pages {}

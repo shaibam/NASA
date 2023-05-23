@@ -11,11 +11,6 @@ const meta: Meta<typeof ImageGallery> = {
 export default meta;
 type Story = StoryObj<typeof ImageGallery>;
 
-
-export const Default: Story = {
-    render: () => <ImageGallery />,
-};
-
 const filterPhotos = (photos: any) => {
     return _.map(photos, ({ id, img_src, camera, earth_date }) => {
         return {
@@ -30,4 +25,8 @@ const filterPhotos = (photos: any) => {
 export const WithProps: Story = {
     render: () => <ImageGallery
         images={filterPhotos(IMAGES.photos)} />,
+};
+
+export const Default: Story = {
+    render: () => <ImageGallery />,
 };
