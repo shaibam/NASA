@@ -1,7 +1,8 @@
 import React, { useMemo, useState } from 'react'
 import _ from 'lodash'
 import style from './style/style.module.css'
-import Image from '../Image/Image'
+import Image from '../../Image/Image'
+// import Image from '../../Image/Image'
 
 type Props = {
   images?: Array<{
@@ -34,11 +35,7 @@ const Gallery = ({ images }: Props) => {
             src={src}
           />
         })}
-      </div>
-      <ul className={style.pages}>
-        <li>Next</li>
-        <li>Prev</li>
-      </ul>
+      </div>    
     </>
   )
 }

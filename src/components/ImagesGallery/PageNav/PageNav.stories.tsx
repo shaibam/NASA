@@ -1,7 +1,6 @@
 
 import type { Meta, StoryObj } from '@storybook/react';
 import PageNav from './PageNav';
-import _ from 'lodash';
 
 const meta: Meta<typeof PageNav> = {
     title: 'PageNav',
@@ -11,10 +10,15 @@ const meta: Meta<typeof PageNav> = {
 export default meta;
 type Story = StoryObj<typeof PageNav>;
 
+export const WithIndex: Story = {
+    render: () => <PageNav index={5} pages={9} />,
+};
+
+export const WithOutIndex: Story = {
+    render: () => <PageNav pages={9} />,
+};
 
 export const Default: Story = {
     render: () => <PageNav />,
 };
-export const WithProps: Story = {
-    render: () => <PageNav index={0} pages={9} />,
-};
+
