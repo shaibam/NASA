@@ -1,21 +1,22 @@
 import clsx from 'clsx'
 import _ from 'lodash'
-import React, { useEffect, useRef, useState } from 'react'
-import Image from '../Image/Image'
+import React, { useState } from 'react'
 import ItemContainer from './ItemContainer/ItemContainer'
 import style from './style/style.module.css'
 
-type Props = {
-    images?: Array<{
-        id: number,
-        src?: string,
-        cameraName?: string,
-        date?: string
-    }>
+export type Record = {
+    id: number,
+    src?: string,
+    cameraName?: string,
+    date?: string
+}
+
+export type Props = {
+    images?: Array<Record>
 }
 
 const ImageCarousel = ({ images }: Props) => {
-    const IMAGES_IN_VIEW = 4
+    const IMAGES_IN_VIEW = 5
     const [inView, setInView] = useState({
         start: 0,
         end: IMAGES_IN_VIEW - 1,

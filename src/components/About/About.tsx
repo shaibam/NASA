@@ -4,18 +4,15 @@ import Button from './Button/Button'
 import style from './style/style.module.css'
 
 type Props = {
-    text?: string,
-    image?: object,
     onViewByDate?: () => any,
     onViewWeather?: () => any,
 }
 
-const About = ({ text, image, onViewByDate, onViewWeather }: Props) => {
-    if (!text && _.isEmpty(image)) return null
+const About = ({ onViewByDate = () => { }, onViewWeather = () => { } }: Props) => {
     return (
         <div className={style.main}>
             <div className={style.imageWrapper}>
-                <img className={style.image} src='https://mars.nasa.gov/internal_resources/586/' alt='cover'/>
+                <img className={style.image} src='https://mars.nasa.gov/internal_resources/586/' alt='cover' />
                 <span className={style.imageDescription} >Curiosity rover image</span>
             </div>
             <div className={style.right}>

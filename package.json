@@ -23,7 +23,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "storybook": "storybook dev -p 6006",
+    "storybook": "STORYBOOK_DEV=true storybook dev -p 6006",
     "build-storybook": "storybook build",
     "test-storybook": "test-storybook --watch"
   },
@@ -60,6 +60,7 @@
     "eslint-plugin-storybook": "^0.6.12",
     "prop-types": "^15.8.1",
     "storybook": "^7.0.12",
+    "storybook-addon-mock": "^4.0.0",
     "webpack": "^5.83.1"
   }
 }

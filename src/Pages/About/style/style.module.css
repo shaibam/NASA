@@ -1,0 +1,37 @@
+.main {    
+}
+
+.aboutPage {
+    width: 1200px;
+    height: 750px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}    
+
+h1.pageTitle {
+    margin-bottom: 0px;
+}
+
+.top {
+    width:1100px;
+    margin-top: 25px;
+}
+
+.bottom {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.carouselTitle {
+    width: 100%;
+    font-size: 28px;
+    letter-spacing: .3px;
+}
+
+.secondary {
+    color: #cc9b4b
+}
