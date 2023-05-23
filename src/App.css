@@ -1,3 +1,8 @@
+:root {
+  --primary-color: #ded6c9;
+  --secondary-color: #b48334;
+}
+
 * {
   font-family: 'Lato';
   color:black
@@ -5,5 +10,5 @@
 
 html, body {  
   width: 1200px;
-  margin: 0 auto;
+  margin: 0 auto;  
 }

@@ -1,13 +1,12 @@
-.date {    
-}
+.date {}
 
 .form {
-    display: flex;    
+    display: flex;
     align-items: center;
     gap: 5px
 }
 
-.form label {    
+.form label {
     font-size: 17px;
 }
 
@@ -28,17 +27,17 @@
     background-color: transparent;
     width: 162px;
     text-indent: 10px;
-    
+
 }
 
 .search {
     all: unset;
     cursor: pointer;
-    background-color: #ded6c9;
+    background-color: var(--primary-color);
     height: 100%;
     padding-inline: 22px;
 }
 
 .search:hover {
-    background-color: #b48334;
+    background-color: var(--secondary-color);
 }

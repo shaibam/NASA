@@ -17,29 +17,29 @@
 .arrowContainer {
     transform: translateY(-6px);
     width: fit-content;
-    height: fit-content;    
+    height: fit-content;
 }
 
 .arrow {
     all: unset;
     cursor: pointer;
-    border: solid #ded6c9;
-    border-width: 0 4px 4px 0;    
+    border: solid var(--primary-color);
+    border-width: 0 4px 4px 0;
     padding: 3px;
     height: 38px;
-    width: 38px;        
+    width: 38px;
     transform-origin: center;
 }
 
 .arrowContainer:hover .arrow {
-    border: solid #b48334;
+    border: solid var(--secondary-color);
     border-width: 0 4px 4px 0;
 }
 
 .right {
-    transform: rotate(-45deg);    
+    transform: rotate(-45deg);
 }
 
 .left {
-    transform: rotate(135deg);    
+    transform: rotate(135deg);
 }
