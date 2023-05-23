@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { PhotoType } from '../../Types/PhotoType'
 import imagesMock from '../../mocks/mockPhotos.json'
 import _ from 'lodash'

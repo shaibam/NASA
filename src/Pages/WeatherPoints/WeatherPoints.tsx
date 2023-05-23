@@ -3,7 +3,6 @@ import { useWeather } from '../hooks/useWeathePoints';
 import WeatherPointsList from '../../components/WeatherPoints/WeatherPoints';
 
 import style from './style/style.module.css';
-import _ from 'lodash';
 
 type Props = {}
 

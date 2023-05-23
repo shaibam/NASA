@@ -1,7 +1,6 @@
 import React from 'react'
 import AboutComponent from '../../components/About/About'
 import ImageCarousel from '../../components/ImageCarousel/ImageCarousel'
-import _ from 'lodash'
 import style from './style/style.module.css'
 import { useImages } from '../hooks/useImages'
 

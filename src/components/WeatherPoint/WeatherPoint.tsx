@@ -1,5 +1,4 @@
 import React from 'react'
-import clsx from 'clsx';
 import style from './style/style.module.css'
 import Item from './Item/Item';
 import _ from 'lodash';

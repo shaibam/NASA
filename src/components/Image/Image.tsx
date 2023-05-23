@@ -10,7 +10,7 @@ const Image = ({ src }: Props) => {
     if (!src) return null
     return (
         <div className={style.main}>
-            <img className={style.image} src={src} />
+            <img className={style.image} src={src} alt="" />
         </div>
     )
 }

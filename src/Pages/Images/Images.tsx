@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import DateInput from '../../components/DateInput/DateInput'
 import ImagesGallery from '../../components/ImagesGallery/ImagesGallery'
 import { useImages } from '../hooks/useImages'

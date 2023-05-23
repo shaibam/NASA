@@ -1,7 +1,6 @@
 import React, { useMemo, useState } from 'react'
 import Gallery from './Gallery/Gallery'
 import PageNav from './PageNav/PageNav'
-import _ from 'lodash'
 import style from './style/style.module.css';
 
 type Props = {

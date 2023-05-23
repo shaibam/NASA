@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { WeatherPointType } from '../../Types/WeatherPointType'
 import _ from 'lodash'
 import { generateMockWeatherPoints } from '../../mocks/generateMockWeatherPoints'
@@ -27,7 +27,7 @@ export const useWeather = () => {
             .then(r => r.json())
             .then(j => {
                 if (j.error) {
-                    const points: any = remapWeather(generateMockWeatherPoints());                    
+                    const points: any = remapWeather(generateMockWeatherPoints());
                     setWeatherPointList(points);
                 } else {
                     setWeatherPointList(remapWeather(j))
