@@ -11,14 +11,14 @@ type Props = {
 
 const ItemContainer = ({ scrollIntoView, src, cameraName, date }: Props) => {
     const itemRef = useRef<HTMLLIElement>(null);
-    
+
     useEffect(() => {
         if (!itemRef.current || !scrollIntoView) return;
         itemRef.current.scrollIntoView({ behavior: "smooth" })
     }, [scrollIntoView])
 
     const displayDate = useMemo(() => {
-        if (!date) return null
+        if (!date) return ''
         return new Date(date).toDateString()
     }, [date])
 
@@ -26,11 +26,15 @@ const ItemContainer = ({ scrollIntoView, src, cameraName, date }: Props) => {
         className={style.item}
         ref={itemRef}
     >
-        <Image src={src} />
-        <div className={style.details}>
+        <Image
+            src={src}
+            cameraName={cameraName}
+            displayDate={displayDate}
+        />
+        {/* <div className={style.details}>
             <span>{cameraName}</span>
             <span>{displayDate}</span>
-        </div>
+        </div> */}
     </li>)
 }
 
