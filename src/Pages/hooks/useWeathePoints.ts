@@ -26,7 +26,7 @@ export const useWeather = () => {
         fetch(URL)
             .then(r => r.json())
             .then(j => {
-                if (j.error) {
+                if (j.error || _.keys(j).length === 2) {
                     const points: any = remapWeather(generateMockWeatherPoints());
                     setWeatherPointList(points);
                 } else {

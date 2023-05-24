@@ -5,7 +5,7 @@ const randomNumber = () => {
 export const generateMockWeatherPoints = () => {
     const o = { sol_keys: [] }
 
-    for (let i = 1; i < 100; i++) {
+    for (let i = 1; i < 20; i++) {
         o['sol_keys'].push(String(i));
         o[i] = {
             "AT": {
