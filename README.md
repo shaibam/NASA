@@ -24,6 +24,6 @@ Open [http://localhost:6006](http://localhost:6006) to view it in the browser.
 *   If a component is only used under a specific parent component and is never reused it is placed according to the above rules in it's parent folder. If it is reused it moves to the root of te components folder,
 ## Notes
 *   During development, the API's returned a **status:error** because of too many requests, so a mock API was used instead.
-*   Bonus tasks were not done.
+*   Bonus task done - Toggle weather points view from list to chart
 *   Responsiveness wasn't implemented.
 

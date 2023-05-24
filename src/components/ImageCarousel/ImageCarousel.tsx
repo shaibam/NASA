@@ -55,6 +55,8 @@ const ImageCarousel = ({ images }: Props) => {
                     return <ItemContainer
                         key={id}
                         src={src}
+                        cameraName={cameraName}
+                        date={date}
                         scrollIntoView={index === (inView.direction === 1 ? inView.end : inView.start)}
                     />
                 })}
