@@ -25,5 +25,6 @@ Open [http://localhost:6006](http://localhost:6006) to view it in the browser.
 ## Notes
 *   During development, the API's returned a **status:error** because of too many requests, so a mock API was used instead.
 *   Bonus task done - Toggle weather points view from list to chart
+*   Bonus task done - Display basic info on image hover
 *   Responsiveness wasn't implemented.
 
