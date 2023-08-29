@@ -1,14 +1,8 @@
 import React from 'react';
-// import logo from './logo.svg';
 import './App.css';
-// import style from './App.module.css';
-
-// import { createRoot } from "react-dom/client";
 import {
   createBrowserRouter,
-  RouterProvider,
-  // Route,
-  // Link,
+  RouterProvider  
 } from "react-router-dom";
 import About from './Pages/About/About';
 import Images from './Pages/Images/Images';
